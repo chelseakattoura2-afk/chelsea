@@ -71,7 +71,7 @@ export default function App() {
         )}
 
         {selectedPlant && (
-          <PlantDetail key="plant-detail" plant={selectedPlant} onBack={() => setSelectedPlant(null)} />
+          <PlantDetail plant={selectedPlant} onBack={() => setSelectedPlant(null)} />
         )}
       </AnimatePresence>
 

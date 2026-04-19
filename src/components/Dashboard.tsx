@@ -27,10 +27,16 @@ export const Dashboard = ({ userData, onNavigate }: { userData: any, onNavigate:
           <p className="text-slate-400 font-medium">Hello, {userData.name || 'Explorer'}</p>
           <h2 className="text-2xl font-bold">Your Skin Today</h2>
         </div>
-        <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center">
-          <div className="w-8 h-8 bg-[#2E5BFF] rounded-xl flex items-center justify-center text-white font-bold">
-            {userData.name?.charAt(0) || 'M'}
-          </div>
+        <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center overflow-hidden">
+          <img 
+            src="/Myrea Logo.png" 
+            alt="Logo" 
+            className="w-8 h-8 object-contain"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/myrea/100/100';
+            }}
+          />
         </div>
       </div>
 

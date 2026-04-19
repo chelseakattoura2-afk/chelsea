@@ -61,8 +61,16 @@ export const Onboarding = ({
           transition={{ duration: 6, repeat: Infinity }}
           className="w-full h-full border-4 border-[#2E5BFF]/10 rounded-full flex items-center justify-center"
          >
-           <motion.div className="w-3/4 h-3/4 bg-white rounded-full shadow-xl flex items-center justify-center">
-              <Leaf size={64} className="text-[#2E5BFF]" />
+           <motion.div className="w-3/4 h-3/4 bg-white rounded-full shadow-xl flex items-center justify-center overflow-hidden">
+              <img 
+                src="/Myrea Logo.png" 
+                alt="Myrēa" 
+                className="w-1/2 h-1/2 object-contain"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/myrea/200/200';
+                }}
+              />
            </motion.div>
          </motion.div>
          <div className="absolute top-10 left-10 w-8 h-8 bg-[#FF6B35] rounded-full" />

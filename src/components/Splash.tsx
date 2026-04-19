@@ -22,13 +22,21 @@ export const Splash = ({ onComplete }: { onComplete: () => void }) => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="text-center"
       >
-        <div className="w-24 h-24 bg-[#2E5BFF] rounded-[2rem] flex items-center justify-center mb-6 mx-auto relative">
+        <div className="w-24 h-24 bg-[#2E5BFF] rounded-[2rem] flex items-center justify-center mb-6 mx-auto relative overflow-hidden">
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute inset-0 border-2 border-white/20 rounded-[2rem] scale-110"
           />
-          <Leaf className="text-white w-12 h-12" />
+          <img 
+            src="/Myrea Logo.png" 
+            alt="Myrēa Logo" 
+            className="w-16 h-16 object-contain z-10"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/myrea/200/200';
+            }}
+          />
         </div>
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-2">Myrēa</h1>
         <p className="text-slate-400 text-lg font-medium">ميريا</p>
