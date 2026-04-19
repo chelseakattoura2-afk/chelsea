@@ -1,0 +1,14 @@
+{
+  "name": "Myrēa",
+  "description": "A personalized skincare app for Lebanese teenagers rooted in ethnobotanical heritage.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "Interactive Skincare Quiz",
+    "Lebanese Herbarium",
+    "Lifestyle Analysis Graphs",
+    "Skin Scan Feature",
+    "DIY Formula Builder"
+  ]
+}
